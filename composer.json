@@ -1,0 +1,14 @@
+{
+    "name": "luciorosella/desarrollo",
+    "description": "Prueba Tecnica",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Lucio Rosella",
+            "email": "lucio.rosella.92@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
