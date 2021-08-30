@@ -17,6 +17,7 @@
                 break;
             case 2:
                 /* Busqueda por nombre del composer.json */
+                
                 $name = $_GET['name_composer'];
                 
                 $directory = new Directories();
