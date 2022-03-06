@@ -1,0 +1,21 @@
+name: 🚀 Deploy on push master
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+
+    - name: 📂 Sync file via scp
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.VM_HOST }}
+        username: ${{ secrets.VM_USERNAME }}
+        password: ${{ secrets.VM_PASSWORD }}
+        source: ".,!.github/*"
+        target: "/var/www/html/"
